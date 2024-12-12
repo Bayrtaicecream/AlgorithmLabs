@@ -1,0 +1,34 @@
+class Solution {
+    public int[] twoSum(int[] nums, int target) {   //1                                                                                                  //2too niilb trgt-tai tets ind buts
+        Map<Integer, Integer> numMap = new HashMap<>();                                                                                                      //tulh bln too hsor n had
+        int n = nums.length;                                                                                                                                              //mas urt
+
+        for (int i = 0; i < n; i++){
+            int compliment = target - nums[i];
+            if (numMap.containsKey(compliment)) {                                                                                                                      //umn had esh-g shal
+                return new int[]{numMap.get(compliment), i};                                                                                                //tuuni ind bln odo-n ind buts
+            }
+            numMap.put(nums[i], i);                                                                                                  //comp bhg bl odo-n elm-g hashmapd nmj tuni ind-g hadg
+        }
+        return null;
+    }
+}
+
+
+
+
+
+# for key, value in test1.items():
+    #     self.assertEqual(merge_sort(key), value)
+    #     self.assertEqual(binary_search(mas, 0, len(mas) - 1, 45), 5)  
+    #     self.assertEqual(searchElement(mas, 12), 1) 
+    #     self.assertEqual(searchElemt(mas, 11), 0)   
+    #     self.assertEqual(insertion_sort(mas),  [5, 6, 11, 12, 13]) 
+    #     self.assertEqual(bubble_sort(arr),  [5, 6, 11, 12, 13]) 
+    #     self.assertEqual(merge_sort(mas),  [5, 6, 11, 12, 13])
+
+    # def test_add(self):
+    #     for data in test1:
+    #         for key, value in data.items():
+    #             result = merge_sort(key)
+    #             self.assertEqual(result, value, f"Expected {value} for input {key}, but got {result}")
